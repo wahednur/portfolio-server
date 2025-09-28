@@ -56,9 +56,9 @@ A full-stack personal portfolio website built with modern technologies, includin
 │   │   │   │   ├── 📄 auth.route.ts
 │   │   │   │   └── 📄 auth.service.ts
 │   │   │   ├── 📁 blog/
-│   │   │   │   ├── 📄 post.controller.ts
-│   │   │   │   ├── 📄 post.route.ts
-│   │   │   │   └── 📄 post.service.ts
+│   │   │   │   ├── 📄 blog.controller.ts
+│   │   │   │   ├── 📄 blog.route.ts
+│   │   │   │   └── 📄 blog.service.ts
 │   │   │   ├── 📁 portfolio/
 │   │   │   │   ├── 📄 portfolio.controller.ts
 │   │   │   │   ├── 📄 portfolio.route.ts
