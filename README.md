@@ -47,9 +47,28 @@ A full-stack personal portfolio website built with modern technologies, includin
 │   └── 📄 schema.prisma
 ├── 📁 src/
 │   ├── 📁 app/
-│   ├── 📁 config/
-│   │   └── 📄 db.ts
-│   ├── 📁 modules/
+│   │   ├── 📁 config/
+│   │   │   └── 📄 db.ts
+│   │   ├── 📁 interface/
+│   │   ├── 📁 modules/
+│   │   │   ├── 📁 auth/
+│   │   │   │   ├── 📄 auth.controller.ts
+│   │   │   │   ├── 📄 auth.route.ts
+│   │   │   │   └── 📄 auth.service.ts
+│   │   │   ├── 📁 blog/
+│   │   │   │   ├── 📄 post.controller.ts
+│   │   │   │   ├── 📄 post.route.ts
+│   │   │   │   └── 📄 post.service.ts
+│   │   │   ├── 📁 portfolio/
+│   │   │   │   ├── 📄 portfolio.controller.ts
+│   │   │   │   ├── 📄 portfolio.route.ts
+│   │   │   │   └── 📄 portfolio.service.ts
+│   │   │   └── 📁 user/
+│   │   │       ├── 📄 user.controller.ts
+│   │   │       ├── 📄 user.route.ts
+│   │   │       └── 📄 user.service.ts
+│   │   └── 📁 routes/
+│   │       └── 📄 index.ts
 │   ├── 📄 app.ts
 │   └── 📄 server.ts
 ├── 🔒 .env 🚫 (auto-hidden)
