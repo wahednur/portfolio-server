@@ -33,6 +33,36 @@ A full-stack personal portfolio website built with modern technologies, includin
 
 ---
 
+## Project folder structure
+
+```
+├── 📁 .git/ 🚫 (auto-hidden)
+├── 📁 dist/ 🚫 (auto-hidden)
+├── 📁 node_modules/ 🚫 (auto-hidden)
+├── 📁 prisma/
+│   ├── 📁 migrations/
+│   │   ├── 📁 20250928191242_database_migration/
+│   │   │   └── 🗄️ migration.sql
+│   │   └── ⚙️ migration_lock.toml
+│   └── 📄 schema.prisma
+├── 📁 src/
+│   ├── 📁 app/
+│   ├── 📁 config/
+│   │   └── 📄 db.ts
+│   ├── 📁 modules/
+│   ├── 📄 app.ts
+│   └── 📄 server.ts
+├── 🔒 .env 🚫 (auto-hidden)
+├── 🚫 .gitignore
+├── 📖 README.md
+├── 🔒 bun.lock
+├── 📄 package-lock.json
+├── 📄 package.json
+└── 📄 tsconfig.json
+```
+
+---
+
 ## 🧩 Database Schema (Prisma Models)
 
 ### `User`
@@ -103,6 +133,8 @@ model Post {
 }
 ```
 
+---
+
 ## Getting Started
 
 ### 1. Clone the Repository
@@ -126,7 +158,10 @@ yarn install
 
 ### 3. Set Up Environment Variables
 
+.env
+
 ```
+
 DATABASE_URL="your_neon_database_url"
 JWT_SECRET="your_jwt_secret_key"
 
