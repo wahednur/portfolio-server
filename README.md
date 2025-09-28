@@ -161,7 +161,8 @@ yarn install
 .env
 
 ```
-
+PORT="3000"
+NODE_ENV="development"
 DATABASE_URL="your_neon_database_url"
 JWT_SECRET="your_jwt_secret_key"
 
@@ -190,3 +191,15 @@ package.json
 
 bun  dev
 ```
+
+## 👨‍💻 Author
+
+**Abdul Wahed Nur**  
+MERN Stack Developer
+✉️: <wahednur@gmail.com>
+📞: +88 01917839303
+[Portfolio](https://wahednur.vercel.app) | [LinkedIn](https://www.linkedin.com/in/wahednur/)
+
+---
+
+Let me know if you want to add API documentation (like Swagger/OpenAPI), deployment instructions (e.g., Docker), or frontend-related details .
