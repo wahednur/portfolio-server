@@ -12,7 +12,7 @@ async function connectDB() {
     await prisma.$connect();
     console.log(`PostgreSQL Database connected successfully`);
   } catch (error) {
-    console.log(`PostgreSQL Database connection failed`);
+    console.log(`PostgreSQL Database connection failed`, error);
     process.exit(1);
   }
 }
@@ -31,4 +31,54 @@ async function startServer() {
   }
 }
 
-startServer();
+(async () => {
+  startServer();
+})();
+
+process.on("SIGTERM", () => {
+  console.log("SIGTERM signal recieved... Server shutting down..");
+
+  if (server) {
+    server.close(() => {
+      process.exit(1);
+    });
+  }
+
+  process.exit(1);
+});
+
+process.on("SIGINT", () => {
+  console.log("SIGINT signal recieved... Server shutting down..");
+
+  if (server) {
+    server.close(() => {
+      process.exit(1);
+    });
+  }
+
+  process.exit(1);
+});
+
+process.on("unhandledRejection", (err) => {
+  console.log("Unhandled Rejecttion detected... Server shutting down..", err);
+
+  if (server) {
+    server.close(() => {
+      process.exit(1);
+    });
+  }
+
+  process.exit(1);
+});
+
+process.on("uncaughtException", (err) => {
+  console.log("Uncaught Exception detected... Server shutting down..", err);
+
+  if (server) {
+    server.close(() => {
+      process.exit(1);
+    });
+  }
+
+  process.exit(1);
+});
