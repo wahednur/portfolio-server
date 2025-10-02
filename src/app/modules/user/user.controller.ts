@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { NextFunction, Request, Response } from "express";
 import statusCode from "http-status-codes";
-import { catchAsync } from "../../utils/catchAsync";
+import { catchAsync } from "../../../middlewares/catchAsync";
 import { sendResponse } from "../../utils/sendResponse";
 import { UserService } from "./user.service";
 

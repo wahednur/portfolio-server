@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import { Prisma } from "@prisma/client";
 import bcrypt from "bcryptjs";
 import { prisma } from "../../config/db";
 import ApiError from "../../errorHelpers/ApiError";
 import { createUserSchema } from "./user.validator";
 
-const createUser = async (payload: unknown) => {
+const createUser = async (payload: Prisma.UserCreateInput) => {
   const parsed = createUserSchema.safeParse(payload);
   if (!parsed.success) {
     throw new ApiError(400, parsed.error.message);
