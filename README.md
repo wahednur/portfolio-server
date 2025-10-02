@@ -41,20 +41,6 @@ A full-stack personal portfolio website built with modern technologies, includin
 ├── 📁 node_modules/ 🚫 (auto-hidden)
 ├── 📁 prisma/
 │   ├── 📁 migrations/
-│   │   ├── 📁 20250928191242_database_migration/
-│   │   │   └── 🗄️ migration.sql
-│   │   ├── 📁 20251001203454_update_portfolio/
-│   │   │   └── 🗄️ migration.sql
-│   │   ├── 📁 20251001205525_upsate_portfolio/
-│   │   │   └── 🗄️ migration.sql
-│   │   ├── 📁 20251001205827_update_category/
-│   │   │   └── 🗄️ migration.sql
-│   │   ├── 📁 20251002012009_upadate_post_and_post_category/
-│   │   │   └── 🗄️ migration.sql
-│   │   ├── 📁 20251002025544_change_post_category_to_blog_category/
-│   │   │   └── 🗄️ migration.sql
-│   │   ├── 📁 20251002033022_thum_optional/
-│   │   │   └── 🗄️ migration.sql
 │   │   └── ⚙️ migration_lock.toml
 │   └── 📄 schema.prisma
 ├── 📁 src/
