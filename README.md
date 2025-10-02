@@ -43,12 +43,26 @@ A full-stack personal portfolio website built with modern technologies, includin
 │   ├── 📁 migrations/
 │   │   ├── 📁 20250928191242_database_migration/
 │   │   │   └── 🗄️ migration.sql
+│   │   ├── 📁 20251001203454_update_portfolio/
+│   │   │   └── 🗄️ migration.sql
+│   │   ├── 📁 20251001205525_upsate_portfolio/
+│   │   │   └── 🗄️ migration.sql
+│   │   ├── 📁 20251001205827_update_category/
+│   │   │   └── 🗄️ migration.sql
+│   │   ├── 📁 20251002012009_upadate_post_and_post_category/
+│   │   │   └── 🗄️ migration.sql
+│   │   ├── 📁 20251002025544_change_post_category_to_blog_category/
+│   │   │   └── 🗄️ migration.sql
+│   │   ├── 📁 20251002033022_thum_optional/
+│   │   │   └── 🗄️ migration.sql
 │   │   └── ⚙️ migration_lock.toml
 │   └── 📄 schema.prisma
 ├── 📁 src/
 │   ├── 📁 app/
 │   │   ├── 📁 config/
 │   │   │   └── 📄 db.ts
+│   │   ├── 📁 errorHelpers/
+│   │   │   └── 📄 ApiError.ts
 │   │   ├── 📁 interface/
 │   │   ├── 📁 modules/
 │   │   │   ├── 📁 auth/
@@ -61,20 +75,36 @@ A full-stack personal portfolio website built with modern technologies, includin
 │   │   │   │   └── 📄 blog.service.ts
 │   │   │   ├── 📁 portfolio/
 │   │   │   │   ├── 📄 portfolio.controller.ts
+│   │   │   │   ├── 📄 portfolio.interface.ts
 │   │   │   │   ├── 📄 portfolio.route.ts
 │   │   │   │   └── 📄 portfolio.service.ts
 │   │   │   └── 📁 user/
 │   │   │       ├── 📄 user.controller.ts
+│   │   │       ├── 📄 user.interface.ts
 │   │   │       ├── 📄 user.route.ts
-│   │   │       └── 📄 user.service.ts
-│   │   └── 📁 routes/
-│   │       └── 📄 index.ts
+│   │   │       ├── 📄 user.service.ts
+│   │   │       └── 📄 user.validator.ts
+│   │   ├── 📁 routes/
+│   │   │   └── 📄 index.ts
+│   │   └── 📁 utils/
+│   │       ├── 📁 jwt/
+│   │       │   ├── 📄 jwt.ts
+│   │       │   ├── 📄 setCookies.ts
+│   │       │   └── 📄 userToken.ts
+│   │       └── 📄 sendResponse.ts
+│   ├── 📁 middlewares/
+│   │   ├── 📄 catchAsync.ts
+│   │   └── 📄 checkAuth.ts
+│   ├── 📁 types/
+│   │   └── 📁 express/
+│   │       └── 📄 index.d.ts
 │   ├── 📄 app.ts
 │   └── 📄 server.ts
 ├── 🔒 .env 🚫 (auto-hidden)
 ├── 🚫 .gitignore
 ├── 📖 README.md
 ├── 🔒 bun.lock
+├── 📄 eslint.config.mjs
 ├── 📄 package-lock.json
 ├── 📄 package.json
 └── 📄 tsconfig.json
