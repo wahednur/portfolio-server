@@ -1,7 +1,8 @@
-import jwt, { JwtPayload, SignOptions } from "jsonwebtoken";
+import jwt, { SignOptions } from "jsonwebtoken";
+import { DecodedUser } from "../../../types/auth";
 
 export const generateToken = (
-  payload: JwtPayload,
+  payload: DecodedUser,
   secret: string,
   expiresIn: string
 ) => {
@@ -9,7 +10,7 @@ export const generateToken = (
   return token;
 };
 
-export const verifyToken = (token: string, secret: string) => {
-  const verifyToken = jwt.verify(token, secret);
+export const verifyToken = (token: string, secret: string): DecodedUser => {
+  const verifyToken = jwt.verify(token, secret) as DecodedUser;
   return verifyToken;
 };

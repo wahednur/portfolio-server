@@ -28,10 +28,10 @@ const credentialLogin = async (payload: Partial<IUser>) => {
   return jwtPayload;
 };
 
-const getMe = async (id: string) => {
+const getMe = async (email: string) => {
   const me = await prisma.user.findUnique({
     where: {
-      id: id,
+      email: email,
     },
   });
   if (!me) return null;

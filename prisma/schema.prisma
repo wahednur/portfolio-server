@@ -69,6 +69,7 @@ model Portfolio {
   img         String?
   description String?
   authorId    String
+  tags        String[] @default([])
   user        User     @relation(fields: [authorId], references: [id])
   category    Category @relation(fields: [catId], references: [id])
   createdAt   DateTime @default(now())

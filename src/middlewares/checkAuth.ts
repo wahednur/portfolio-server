@@ -4,6 +4,7 @@ import { JwtPayload } from "jsonwebtoken";
 import { prisma } from "../app/config/db";
 import ApiError from "../app/errorHelpers/ApiError";
 import { verifyToken } from "../app/utils/jwt/jwt";
+import { DecodedUser } from "../types/auth";
 
 export const checkAuth = (...authRoles: string[]): RequestHandler => {
   return async (req: Request, res: Response, next: NextFunction) => {
@@ -11,8 +12,8 @@ export const checkAuth = (...authRoles: string[]): RequestHandler => {
       let token: string | undefined;
       if (req.headers.authorization?.startsWith("Bearer ")) {
         token = req.headers.authorization.split(" ")[1];
-      } else if (req.cookies?.accesstoken) {
-        token = req.cookies.accesstoken;
+      } else if (req.cookies?.accessToken) {
+        token = req.cookies.accessToken;
       } else if (req.headers["accesstoken"]) {
         token = req.headers["accesstoken"] as string;
       }
@@ -45,7 +46,7 @@ export const checkAuth = (...authRoles: string[]): RequestHandler => {
         );
       }
 
-      req.user = verifiedToken;
+      req.user = verifiedToken as DecodedUser;
       next();
     } catch (error) {
       console.log("JWT error:", error);
